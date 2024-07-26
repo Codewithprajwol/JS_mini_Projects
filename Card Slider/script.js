@@ -1,6 +1,7 @@
 const items = document.querySelectorAll(".slider .items");
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
+const slider=document.querySelector('.slider');
 
 let active = 3;
 
@@ -42,3 +43,5 @@ next.addEventListener('click',()=>{
     active = (active - 1 )>=0 ? active-1 :active;
     showSlides();
   };
+
+ 
