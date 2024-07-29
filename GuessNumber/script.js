@@ -10,26 +10,33 @@ const randomNumber=Math.floor(Math.random()*100);
 const guessedArray=[];
 
 const pattern=/^(0|[1-9][0-9]*)$/;
-const displayData=['Too Low!!','Too High!!','Yes, you are correct :)',`you have lost.. Actual no. was ${randomNumber}`]
+const displayData=['Too Low!!','Too High!!','You Won :)',`you have lost.. Actual no. was ${randomNumber}`]
 startBtn.disabled=true;
-// if(startBtn.disabled){
-//     startBtn.classList.add('disabled');
-// }
+
+
 
 input.addEventListener('input',(e)=>{
     if(!pattern.test(input.value)){
         input.value="";
     }
-    else{
-        guessedArray.push(input.value);
-    }
-
 })
 formArea.addEventListener('submit',(e)=>{
     e.preventDefault();
 })
+
+
 submitBtn.onclick=function(){
-    outputArea.style.display="flex"
+    if(!input.value){
+        outputArea.style.display="none";
+    }
+      
+          if(input.value>=0 && input.value<=100)
+          {
+          guessedArray.push(input.value)
+          outputArea.style.display="flex"
+          }
+    
+  
     if(parseInt(input.value) < randomNumber){
         information.innerText=displayData[0];
      }
@@ -59,6 +66,7 @@ submitBtn.onclick=function(){
         input.focus();
     }
 }
+
     
 startBtn.addEventListener('click',()=>{
     outputArea.style.display="none"
