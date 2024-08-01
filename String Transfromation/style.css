@@ -87,7 +87,7 @@ header .img-container img{
     border:1px solid black;
 }
 .inner-input-container:has(.topic) input{
-    background-color: yellow;
+    background-color:#F5F5DC;
 }
 
 /* footer part */
