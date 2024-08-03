@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRCode Reader</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <main>
         <div class="QRcode-container">
-            <form action="/">
+            <form action="/" onsubmit="return false">
             <h3>QRCode Reader</h3>
             <div class="QR-code-container">
-                <img src="/no-image.png" alt="QRcode">
+                <img id="QR-image" src="/no-image.png" alt="QRcode">
             </div>
-            <input type="text" name="query" id="query">
-            <button class="search-button">search</button>
+            <input type="text" name="query" id="query" placeholder="content in QR">
+            <button class="search-button">Generate Text</button>
         </form>
         </div>
     </main>
