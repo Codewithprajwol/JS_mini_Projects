@@ -6,16 +6,22 @@ const vertical=document.querySelector('#Vertical');
 const message=document.querySelector('#Message');
 const popupContainer=document.querySelector('.Popup');
 
+
+
 function SelectInfo({ver,hor,mes}){
-    const popup=document.createElement('div');
-    popup.classList.add('inner-popup');
-    popup.textContent='I love you RadhaKrishna very Much.';
-    popupContainer.appendChild(popup)
-    
-if(hor=='left' && ver=='top' && mes=='success'){
-  popup.style.backgroundColor="#00B300";
-}
-}
+  const popup=document.createElement('div');
+  popup.classList.add('inner-popup');
+  if(hor=='right' && ver=='top'){
+     popup.classList.add('right');
+  }
+popup.textContent=`I love you RadhaKrishna very Much.`;
+popupContainer.appendChild(popup)
+
+  }
+  
+
+   
+
 
 btn.addEventListener('click',(e)=>{
    SelectInfo({ver:vertical.value ,

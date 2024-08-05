@@ -21,8 +21,7 @@
         <!--start of section part  -->
        <section class="hero-section">
            <div class="hero-section-inner-container">
-            <select name="horizontal" id="Horizontal" style="--left:5%;
-            --right:3%">
+            <select name="horizontal" id="Horizontal">
                 <option value="left">Left</option>
                 <option value="right">Right</option>
             </select>
@@ -37,7 +36,10 @@
                 <option value="info">Info</option>
             </select>
             <input type="text" id="input" placeholder="Message" autocomplete="off" value="This is a toast Message!">
-           <div class="progress-container"> Duration: <progress value="90" max="100"></progress></div> 
+           <div class="progress-container"> 
+            <label for="progressBar">Duration:</label>
+            <input type="range" name="progressBar" id="progressBar" min="2" max="5" value="3">
+            </div> 
             <button id="show-btn">Show Toast</button>
         </div> 
         <div class="Popup">
