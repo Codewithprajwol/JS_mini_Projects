@@ -21,24 +21,28 @@
         <!--start of section part  -->
        <section class="hero-section">
            <div class="hero-section-inner-container">
-            <select name="horizontal" id="Horizontal">
+            <select name="horizontal" id="Horizontal" style="--left:5%;
+            --right:3%">
                 <option value="left">Left</option>
                 <option value="right">Right</option>
             </select>
-            <select name="vertical" id="Vertical">
-                <option value="top">Top</option>
+            <select name="vertical" id="Vertical" style="--top:3%; --bottom:3%;">
+                <option  value="top">Top</option>
                 <option value="bottom">Bottom</option>
             </select>
             <select name="message" id="Message">
                 <option value="success">Success</option>
-                <option value="error">Error</option>
-                <option value="warining">Warning</option>
+                <option  value="error">Error</option>
+                <option value="warning">Warning</option>
                 <option value="info">Info</option>
             </select>
-            <input type="text" placeholder="Message" autocomplete="off" value="This is a toast Message!">
+            <input type="text" id="input" placeholder="Message" autocomplete="off" value="This is a toast Message!">
            <div class="progress-container"> Duration: <progress value="90" max="100"></progress></div> 
             <button id="show-btn">Show Toast</button>
         </div> 
+        <div class="Popup">
+            
+        </div>
        </section>
         <!--end of section part  -->
         <!--start of Footer part  -->
