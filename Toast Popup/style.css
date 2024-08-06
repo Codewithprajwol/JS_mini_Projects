@@ -86,15 +86,12 @@ input{
     position:absolute;
     top:3%;
     left:1%;
-    /* background-color: yellow; */
 }
 
 .inner-popup{
     padding:0.5rem 0.5rem;
     border-radius:5px;
-    /* opacity:0.7; */
     animation:slider .1s linear;
-    background-color:#00B300;
 
 }
 
@@ -110,23 +107,56 @@ input{
     bottom:3%;
 }
 .Popup.right .inner-popup{
-    background-color: #00FFFF;
     animation:slider1 .1s linear;
 }
-/* .inner-popup.right{
-    right:2%;
-    top:3%;
-    opacity:0.5;
-    background-color:#00B300;
+/* for message part */
+.inner-popup.success::before{
+    content:"✓ ";
+}
+.inner-popup.warning::before{
+    content:"⚠ ";
+}
+.inner-popup.info::before{
+    content:"ⓘ ";
+}
+.inner-popup.error::before{
+    content:"✗ ";
+}
+.inner-popup::after{
+    content:" ✕";
+}
+.inner-popu:hover::after{
+    background-color: red;
+}
+.inner-popup.success{
+    background-color: #00B300;
+}
+.inner-popup.warning{
+    background-color: #FFA500;
+}
+.inner-popup.info{
+    background-color: #FFFFE0;
+}
+.inner-popup.error{
+    background-color: #FF0000;
+}
 
-} */
 .progress-container{
     display:flex;
     align-items: center;
     justify-content: space-around;
     gap:.7rem;
 }
-
+/* for remove animation */
+.inner-popup.hide{
+    animation:hide1 linear .1s;
+    animation-fill-mode: forwards;
+}
+.inner-popup.hide1{
+    background-color: red;
+    animation:hide2 linear 1s;
+    animation-fill-mode: both;
+}
 
 /* footer part */
 footer{
@@ -145,6 +175,14 @@ footer{
         transform:translateX(0px);
     }
 }
+@keyframes hide1 {
+    from{
+        transform:translateX(0px);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
 @keyframes slider1 {
     from{
         transform:translateX(200px);
@@ -153,4 +191,11 @@ footer{
         transform:translateX(0px);
     }
 }
-
+@keyframes hide2{
+    from{
+        transform:translateX(0px);
+    }
+    to{
+        transform:translateX(500px);
+    }
+}
