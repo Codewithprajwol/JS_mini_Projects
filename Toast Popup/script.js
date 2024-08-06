@@ -9,19 +9,29 @@ const popupContainer=document.querySelector('.Popup');
 
 
 function SelectInfo({ver,hor,mes}){
+  if(hor=='right'){
+    popupContainer.classList.add('right');
+  }
+  else{
+    popupContainer.classList.remove('right')
+  }
+
+  if( ver=='bottom'){
+    popupContainer.classList.add('bottom');
+  }
+  else{
+    popupContainer.classList.remove('bottom')
+  }
   const popup=document.createElement('div');
   popup.classList.add('inner-popup');
-  if(hor=='right' && ver=='top'){
-     popup.classList.add('right');
+  popup.textContent=input.value;
+  popupContainer.appendChild(popup)
+
+
+  setTimeout(()=>{
+    
+  },1000)
   }
-popup.textContent=`I love you RadhaKrishna very Much.`;
-popupContainer.appendChild(popup)
-
-  }
-  
-
-   
-
 
 btn.addEventListener('click',(e)=>{
    SelectInfo({ver:vertical.value ,
