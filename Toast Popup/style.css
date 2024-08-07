@@ -99,12 +99,13 @@ input{
     content:'X ';
 }
 .Popup.right{
-    top:3%;
-    left:auto;
-    right:3%;
+    left:unset;
+    right:1%;
     }
 .Popup.bottom{
     bottom:3%;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .Popup.right .inner-popup{
     animation:slider1 .1s linear;
@@ -126,12 +127,6 @@ input{
     cursor:pointer;
 
 }
-/* .inner-popup::after{
-    content:" ✕";
-}
-.inner-popup:hover::after{
-    cursor:pointer;
-} */
 .inner-popup.success{
     background-color: #00B300;
 }
@@ -139,7 +134,7 @@ input{
     background-color: #FFA500;
 }
 .inner-popup.info{
-    background-color: #FFFFE0;
+    background-color: #f9f9b5;
 }
 .inner-popup.error{
     background-color: #FF0000;
@@ -157,9 +152,7 @@ input{
     animation-fill-mode: forwards;
 }
 .inner-popup.hide1{
-    background-color: red;
-    animation:hide2 linear 1s;
-    animation-fill-mode: both;
+    animation:hide2 linear .1s forwards !important;
 }
 
 /* footer part */
@@ -173,7 +166,7 @@ footer{
 
 @keyframes slider {
     from{
-        transform:translateX(-200px);
+        transform:translateX(-100%);
     }
     to{
         transform:translateX(0px);
@@ -189,7 +182,7 @@ footer{
 }
 @keyframes slider1 {
     from{
-        transform:translateX(200px);
+        transform:translateX(100%);
     }
     to{
         transform:translateX(0px);
@@ -200,6 +193,6 @@ footer{
         transform:translateX(0px);
     }
     to{
-        transform:translateX(500px);
+        transform:translateX(100%);
     }
 }
