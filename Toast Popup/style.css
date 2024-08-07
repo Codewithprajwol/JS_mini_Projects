@@ -79,6 +79,7 @@ input{
     border-radius:7px;
     cursor:pointer;
 }
+
 .Popup{
     display:flex;
     flex-direction: column-reverse;
@@ -92,7 +93,6 @@ input{
     padding:0.5rem 0.5rem;
     border-radius:5px;
     animation:slider .1s linear;
-
 }
 
 .inner-popup::before{
@@ -122,12 +122,16 @@ input{
 .inner-popup.error::before{
     content:"✗ ";
 }
-.inner-popup::after{
+.close-icon:hover{
+    cursor:pointer;
+
+}
+/* .inner-popup::after{
     content:" ✕";
 }
-.inner-popu:hover::after{
-    background-color: red;
-}
+.inner-popup:hover::after{
+    cursor:pointer;
+} */
 .inner-popup.success{
     background-color: #00B300;
 }

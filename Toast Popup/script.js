@@ -25,22 +25,31 @@ function SelectInfo({ver,hor,mes}){
   popup.classList.add('inner-popup');
   popup.textContent=input.value;
   popup.classList.add(mes)
+  const closeIcon=document.createElement('span');
+  closeIcon.classList.add('close-icon')
+   closeIcon.innerText=' ✕';
+   popup.appendChild(closeIcon);
   popupContainer.appendChild(popup)
 
+  popupContainer.appendChild(popup);
   function removeAnimation(){
     if(hor == 'right'){
       popup.classList.add('hide1');
     }
     else{
-  popup.classList.add('hide');
+      popup.classList.add('hide');
     }
-}
+  }
+  closeIcon.addEventListener('click',(e)=>{
+    removeAnimation();
+    setTimeout(()=>popup.remove(),100)
+  })
 // popup.remove();
   setTimeout(removeAnimation,ProgressBar.value*1000)
-  // setTimeout(()=>{
-  //   popup.remove();
-  //   console.log('i am done')
-  // },ProgressBar.value+.1*1000)
+  setTimeout(()=>{
+    popup.remove();
+    console.log('i am done')
+  },ProgressBar.value+.1*1000)
   }
 
 btn.addEventListener('click',(e)=>{
