@@ -55,7 +55,7 @@ header .img-container img{
     font-weight: 500;
 }
 .hero-section-inner-container{
-    width:40%;
+    width: 400px;
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -73,7 +73,7 @@ header .img-container img{
     color:#c1bebe;
 }
 .hero-section-inner-container input{
-    width:80%;
+    width:70%;
     margin-inline:auto;
     height:30px;
     font-size:1.2rem;
@@ -88,22 +88,13 @@ header .img-container img{
 .hero-section-inner-container input::placeholder{
     font-size:1.2rem;
 }
-.slider{
-    overflow:hidden;
-    border:1px solid black;
+.indicator .true{
+    color:green;
+}
+meter{
     width:80%;
     margin-inline:auto;
-    height:7px;
-    border-radius: 15px;
 }
-.slider span{
-    display:block;
-    width:10%;
-    height:6px;
-    border-radius: inherit;
-    background-color: pink;
-}
-
 /* footer part */
 footer{
     height:5vh;

@@ -19,13 +19,13 @@
         <section class="hero-section">
             <div class="hero-section-inner-container">
                 <input type="text" name="password" id="password" autofocus placeholder="input your password">
-                <ul class="case">
-                    <li>LowerCase</li>
-                    <li>UpperCase</li>
-                    <li>Number</li>
-                    <li>Symbol</li>
+                <ul class="indicator">
+                    <li id="Lcel"  >LowerCase</li>
+                    <li  id="Ucel" >UpperCase</li>
+                    <li id="Nel"  >Number</li>
+                    <li  id="Sel" >Symbol</li>
                 </ul>
-                <div class="slider"><span></span></div>
+                <meter id="meter" min="0" max="100" low="35" high="70" optimum="100"></meter>
                 <div class="char-info">Password has <b>0</b> Char</div>
                 <div class="pwd-strength">Your Password is <b>Weak</b>.</div>
             </div>
