@@ -66,9 +66,11 @@ header .img-container img{
 }
 .progress-bar .inner-progress-bar{
     border-radius:inherit;
-    width:10%;
+    width:0%;
     height:inherit;
     background-color: pink;
+    transition:width linear .1s;
+    
 }
  /* button section started */
 .btn-section{
