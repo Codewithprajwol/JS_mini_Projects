@@ -69,8 +69,7 @@ header .img-container img{
     width:0%;
     height:inherit;
     background-color: pink;
-    transition:width linear .1s;
-    
+    transition:width linear .1s, all linear 1s;    
 }
  /* button section started */
 .btn-section{
