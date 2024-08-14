@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Dm Sans;
+}
+html , body{
+   min-height: 100%;
+    min-width: 100%;
+}
+
+main{
+    position:relative;
+    /* overflow:hidden; */
+    width:100%;
+    height:100vh;
+}
+main header{
+    height:11vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow:0px 1px 5px 0px #cfcfcf;
+}
+header h5{
+    font-family:Dm sans;
+    font-size:1rem;
+}
+header h1{
+    flex-grow: 0.7;
+    text-align: center;
+}
+header .img-container{
+    width:50px;
+    height:50px;
+    cursor:pointer;
+}
+header .img-container img{
+    width:100%;
+}
+/* hero section */
+.hero-section{
+    width:80%;
+    margin-inline:auto;
+    min-height:calc(100vh - 16vh);
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top:2rem;
+    font-size:medium;
+    font-family:Dm Sans;
+    font-weight: 500;
+
+}
+h2{
+    text-align: center;
+    width:23%;
+    letter-spacing: -1px;
+    color:#108070;
+    font-family:cursive;
+    padding-inline:.5rem;
+    border-left:4px solid black;
+    border-right:4px solid black;
+    cursor:pointer;
+    transition:.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+h2:hover{
+    letter-spacing:1px;
+    border-left:8px solid black;
+    border-right:8px solid black;
+    width:28%;  
+}
+
+
+
+/* footer part */
+footer{
+    height:5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow:0px 1px 5px 0px #cfcfcf;
+}
+
+
