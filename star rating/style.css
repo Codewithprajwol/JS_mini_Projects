@@ -55,33 +55,38 @@ header .img-container img{
     font-weight: 500;
 }
 .ratting-container{
-    width:100%;
-    height:20vh;
-    background-color: pink;
+    width:max-content;
+    height:max-content;
+    padding-left:1.5rem;
     display:flex;
     align-items: flex-start;
     justify-content: center;
-    gap:1rem;
+    gap:.5rem;
 }
-.star-container{
-    width:50px;
-    height:50px;
-}
-.star-container img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    cursor:pointer;
 
-}
+
 .hero-section h4{
+    margin-top:3rem;
     font-weight:400;
 }
-.star-container img::selection{
+
+.ratting-container .star{
+    font-size:2rem;
+    border:none;
     background-color: transparent;
+    cursor:pointer;
+    transition:.2s linear;
 }
-.emoji-container {
-    font-size:5rem;
+.ratting-container .star::selection{
+    color:transparent;
+}
+.star.fa-solid{
+    color:#FFD700;
+}
+.emoji-container{
+    text-align: center;
+    margin-top:1rem;
+    font-size:4rem;
 }
 /* footer part */
 footer{
